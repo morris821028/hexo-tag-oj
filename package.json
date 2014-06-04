@@ -1,0 +1,32 @@
+{
+  "name": "hexo-tag-oj",
+  "version": "0.1.0",
+  "description": "Inserts an online judge problem tag",
+  "main": "index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morris821028/hexo-tag-oj.git"
+  },
+  "keywords": [
+    "website",
+    "blog",
+    "hexo",
+    "oj",
+    "acm"
+  ],
+  "author": {
+    "name": "M",
+    "email": "morris821028@gmail.com",
+    "url": "http://www.sergiolepore.net/"
+  },
+  "license": "BSD-3",
+  "engines": {
+    "hexo": ">= 1.0.0"
+  },
+  "dependencies": {
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/morris821028/hexo-tag-oj/issues"
+  }
+}
