@@ -1,6 +1,7 @@
 ## Support OJ ##
 
 * [SCARKY: online challenge on your site!](http://www.scarky.com/)
+* UVa Online Judge
 
 ## Introduction
 
