@@ -32,14 +32,15 @@ $(document).ready(function(){
 			+'.oj-box .oj-box-download .download{width:50px; fheight:24px;line-height:24px;font-size:12px;color:#666;font-weight:bold;text-shadow:0 1px 0 rgba(255,255,255,0.9);padding:2px 10px;border:1px solid #ddd;border-bottom-color:#bbb;border-radius:3px;background:#f5f5f5;background:-moz-linear-gradient(#f5f5f5,#e5e5e5);background:-webkit-linear-gradient(#f5f5f5,#e5e5e5);}'
 			+'.oj-box .oj-box-download .download:hover{color:#527894;border-color:#cfe3ed;border-bottom-color:#9fc7db;background:#f1f7fa;background:-moz-linear-gradient(#f1f7fa,#dbeaf1);background:-webkit-linear-gradient(#f1f7fa,#dbeaf1);}'
 			+'.oj-box .oj-box-download .link {color: black;}'
-			+'.oj-rank {display:inline-block;}'
-			+'.oj-rank table {background: #f5f5f5;border-collapse: separate;box-shadow: inset 0 1px 0 #fff;font-size: 12px;line-height: 24px; text-align: left;border-bottom: 5px solid #999; border-radius: 0.5em;}'
-			+'.oj-rank th {	background: linear-gradient(#777, #444);border-left: 1px solid #555;border-right: 1px solid #777;border-top: 1px solid #555;border-bottom: 1px solid #333;box-shadow: inset 0 1px 0 #999;color: #fff; font-weight: bold; position: relative;text-shadow: 0 1px 0 #000;}'
-			+'.oj-rank th:first-child {	border-left: 1px solid #777;box-shadow: inset 1px 1px 0 #999;}'
-			+'.oj-rank th:last-child {	box-shadow: inset -1px 1px 0 #999;}'
-			+'.oj-rank th:after { background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));}'
-			+'.oj-rank td:first-child {box-shadow: inset 1px 0 0 #fff;}'
-			+'.oj-rank td:last-child {	border-right: 1px solid #e8e8e8;box-shadow: inset -1px 0 0 #fff;}'
+			+'.oj-rank {display:inline-block; padding: 5px;}'
+			+'.oj-rank table { background: #f5f5f5;border-collapse: separate;box-shadow: inset 0 1px 0 #fff;font-size: 12px;line-height: 24px; text-align: left;border-bottom: 5px solid #999; border-radius: 0.5em; padding: 0px;}'
+			+'.oj-rank table thead tr th { background: linear-gradient(#777, #444);border-left: 1px solid #555;border-right: 1px solid #777;border-top: 1px solid #555;border-bottom: 1px solid #333;box-shadow: inset 0 1px 0 #999;color: #fff; font-weight: bold; position: relative;text-shadow: 0 1px 0 #000; padding-bottom: 0em; padding: 0.5em;}'
+			+'.oj-rank table thead tr th:first-child {	border-left: 1px solid #777;box-shadow: inset 1px 1px 0 #999;}'
+			+'.oj-rank table thead tr th:last-child {	box-shadow: inset -1px 1px 0 #999;}'
+			+'.oj-rank table thead tr th:after { background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));}'
+			+'.oj-rank table tbody tr td {padding: 0px; border-spacing: 6px; text-align:center;}'
+			+'.oj-rank table tbody tr td:first-child {box-shadow: inset 1px 0 0 #fff;}'
+			+'.oj-rank table tbody tr td:last-child {border-right: 1px solid #e8e8e8;box-shadow: inset -1px 0 0 #fff;}'
 			+'@media (max-width: 767px) {'
 			+'.oj-box .oj-box-title{height:auto;min-height:60px}'
 			+'.oj-box .oj-box-title h3 .repo{display:block}'
@@ -102,9 +103,9 @@ $(document).ready(function(){
 						var item = rankList[i];
 						table += '<tr>';
 						table += '<td>' + item.rank + '</td>';
-						table += '<td>' + item.name + '(' + item.uname + ')</td>';
+						table += '<td style="text-align:left;">' + item.name + '(' + item.uname + ')</td>';
 						table += '<td>' + lang[item.lan - 1] + '</td>';
-						table += '<td>' + (item.run /1000.0) + '</td>';
+						table += '<td>' + (item.run /1000.0).toFixed(3) + '</td>';
 						table += '</tr>';
 					}
 					$widget.find('.oj-rank-item').html(table);
