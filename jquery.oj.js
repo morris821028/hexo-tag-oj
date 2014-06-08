@@ -134,9 +134,9 @@ $(document).ready(function(){
 				var submit_src = "http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=submit_problem&problemid=" + prob.pid;
 				var discuss_src = "http://acm.uva.es/board/search.php?keywords=" + prob.num;
 				var description = '';
-				description += '<div class="download"><a class="link" href=' + prob_src + '>Problem</a></div>';
-				description += '<div class="download"><a class="link" href=' + submit_src + '>Submit</a></div>';
-				description += '<div class="download"><a class="link" href=' + discuss_src + '>Discuss</a></div>';
+				description += '<div class="download"><a class="link" href=' + prob_src + ' target="_blank">Problem</a></div>';
+				description += '<div class="download"><a class="link" href=' + submit_src + ' target="_blank">Submit</a></div>';
+				description += '<div class="download"><a class="link" href=' + discuss_src + ' target="_blank">Discuss</a></div>';
 				description += '';
 
 				$widget.find('.oj-box-download').html(description);
