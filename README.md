@@ -14,6 +14,8 @@ one page one use
 
 ## Introduction
 
+[![NPM version](https://badge.fury.io/js/hexo-tag-oj.svg)](http://badge.fury.io/js/hexo-tag-oj)
+
 This is a [hexo](https://github.com/tommy351/hexo)
 tag plugin which allows you to add ACM online judge problem.
 
